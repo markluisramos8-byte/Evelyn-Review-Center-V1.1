@@ -1,0 +1,19 @@
+   ▲ Next.js 15.5.29
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 6.0s
+   Linting and checking validity of types ...
+Failed to compile.
+
+./app/evelyn-cards/page.tsx:80:23
+Type error: Argument of type '{ canvasContext: CanvasRenderingContext2D; viewport: PageViewport; }' is not assignable to parameter of type 'RenderParameters'.
+  Property 'canvas' is missing in type '{ canvasContext: CanvasRenderingContext2D; viewport: PageViewport; }' but required in type 'RenderParameters'.
+
+[0m [90m 78 |[39m     canvas[33m.[39mheight [33m=[39m viewport[33m.[39mheight[33m;[39m
+ [90m 79 |[39m
+[31m[1m>[22m[39m[90m 80 |[39m     [36mawait[39m page[33m.[39mrender({ canvasContext[33m:[39m context[33m,[39m viewport })[33m.[39mpromise[33m;[39m
+ [90m    |[39m                       [31m[1m^[22m[39m
+ [90m 81 |[39m
+ [90m 82 |[39m     [36mconst[39m result [33m=[39m [36mawait[39m [33mTesseract[39m[33m.[39mrecognize(canvas[33m,[39m [32m"eng"[39m)[33m;[39m
+ [90m 83 |[39m     [36mconst[39m text [33m=[39m result[33m.[39mdata[33m.[39mtext[33m?[39m[33m.[39mtrim() [33m?[39m[33m?[39m [32m""[39m[33m;[39m[0m
+Next.js build worker exited with code: 1 and signal: null
