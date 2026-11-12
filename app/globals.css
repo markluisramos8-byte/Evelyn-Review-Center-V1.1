@@ -381,13 +381,48 @@ label.field {
   opacity: 0.96;
 }
 
-@media (max-width: 420px) {
+@media (min-width: 768px) {
+  .shell {
+    width: min(100%, 1180px);
+    margin: 0 auto;
+    padding: 18px 26px 96px;
+  }
+
+  .topbar,
+  .hero,
+  .mini-bubble,
+  .mode-grid,
+  .panel,
+  .upload-panel,
+  .deck-card,
+  .section-title {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero {
+    min-height: 120px;
+    padding: 20px 22px;
+  }
+
   .mode-grid {
-    gap: 12px;
+    gap: 18px;
   }
 
   .mode-card {
-    padding: 12px;
+    aspect-ratio: auto;
+    min-height: 260px;
+    padding: 22px 24px;
+  }
+
+  .mode-card p {
+    font-size: 0.95rem;
+    max-width: 30ch;
+  }
+
+  .dock .inner {
+    max-width: 720px;
   }
 }
 
